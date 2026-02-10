@@ -1,0 +1,13 @@
+/* Telegram Login Widget styles */
+.telegram-login-widget {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+/* Override Telegram widget iframe styles if needed */
+.telegram-login-widget iframe {
+  border: none;
+  overflow: hidden;
+}

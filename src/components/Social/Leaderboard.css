@@ -1,0 +1,226 @@
+.leaderboard-container {
+  background: rgba(20, 20, 30, 0.95);
+  border-radius: 20px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  margin: 20px 0;
+}
+
+.leaderboard-header {
+  margin-bottom: 24px;
+}
+
+.leaderboard-header h3 {
+  margin: 0 0 16px 0;
+  font-size: 20px;
+  color: white;
+}
+
+.leaderboard-tabs {
+  display: flex;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px;
+  border-radius: 12px;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 8px 16px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-button.active {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-weight: 600;
+}
+
+.tab-button:hover {
+  color: white;
+}
+
+.leaderboard-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.leaderboard-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.leaderboard-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.leaderboard-item.gold {
+  background: rgba(255, 215, 0, 0.1);
+  border-color: rgba(255, 215, 0, 0.3);
+}
+
+.leaderboard-item.silver {
+  background: rgba(192, 192, 192, 0.1);
+  border-color: rgba(192, 192, 192, 0.3);
+}
+
+.leaderboard-item.bronze {
+  background: rgba(205, 127, 50, 0.1);
+  border-color: rgba(205, 127, 50, 0.3);
+}
+
+.leaderboard-item.current-user {
+  background: rgba(0, 152, 234, 0.1);
+  border: 2px solid rgba(0, 152, 234, 0.5);
+  box-shadow: 0 4px 12px rgba(0, 152, 234, 0.2);
+}
+
+.rank-container {
+  width: 40px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.rank-icon {
+  display: block;
+}
+
+.rank-icon.gold {
+  color: #FFD700;
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.5));
+}
+
+.rank-icon.silver {
+  color: #C0C0C0;
+  filter: drop-shadow(0 0 8px rgba(192, 192, 192, 0.5));
+}
+
+.rank-icon.bronze {
+  color: #CD7F32;
+  filter: drop-shadow(0 0 8px rgba(205, 127, 50, 0.5));
+}
+
+.rank-number {
+  font-size: 18px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.user-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.user-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0098ea 0%, #00b4d8 100%);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.user-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.username {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-level {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.winnings {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.winnings-amount {
+  font-size: 18px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 4px;
+}
+
+.winnings-label {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+}
+
+.current-user-rank {
+  margin-top: 16px;
+  padding: 12px;
+  background: rgba(0, 152, 234, 0.1);
+  border: 1px solid rgba(0, 152, 234, 0.3);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.current-user-rank p {
+  margin: 0;
+  color: #0098ea;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .leaderboard-item {
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .username {
+    font-size: 14px;
+  }
+
+  .winnings-amount {
+    font-size: 16px;
+  }
+}

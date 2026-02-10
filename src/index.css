@@ -1,0 +1,82 @@
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #0f172a;
+  background-color: #f3f4f6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Theme variables */
+  --neon: #a78bfa;
+  --neon-rgb: 167, 139, 250;
+  --bg-gradient: linear-gradient(135deg, #1a0033, #33001a);
+}
+
+[data-theme="new-year"] {
+  --neon: #ffeb3b;
+  --neon-rgb: 255, 235, 59;
+  --bg-gradient: linear-gradient(135deg, #0d1b2a, #1b263b);
+}
+
+[data-theme="halloween"] {
+  --neon: #ff6b6b;
+  --neon-rgb: 255, 107, 107;
+  --bg-gradient: linear-gradient(135deg, #1a0000, #330000);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg-gradient);
+  transition: background 0.8s ease;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Glassmorphism and Effects */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(var(--neon-rgb), 0.4);
+}
+
+.neon-glow {
+  box-shadow: 0 0 20px rgba(var(--neon-rgb), 0.6), 0 0 40px rgba(var(--neon-rgb), 0.4);
+}
+
+.neon-text {
+  text-shadow: 0 0 10px rgba(var(--neon-rgb), 0.8), 0 0 20px rgba(var(--neon-rgb), 0.6);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #a78bfa, #ec4899, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

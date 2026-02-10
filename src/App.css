@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #0a0a0f;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.app-root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Content */
+.content-wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-bottom: 80px; /* Space for fixed footer */
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Age Gate */
+.age-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.age-card {
+  background: linear-gradient(135deg, rgba(26, 26, 36, 0.95), rgba(19, 19, 26, 0.95));
+  border: 1px solid rgba(223, 96, 12, 0.3);
+  border-radius: 24px;
+  padding: 40px 30px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.age-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+  background: linear-gradient(135deg, #df600c, #f45da6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.age-text {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 28px 0;
+  line-height: 1.6;
+}
+
+.age-subtext {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 16px 0 0 0;
+}
+
+.pill-btn {
+  width: 100%;
+  padding: 14px 28px;
+  border-radius: 16px;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pill-solid {
+  background: linear-gradient(135deg, #df600c, #f45da6, #9e0ac7);
+  background-size: 200% 200%;
+  color: white;
+  box-shadow: 0 10px 30px rgba(223, 96, 12, 0.4);
+}
+
+.pill-solid:hover {
+  background-position: 100% 0;
+  box-shadow: 0 15px 40px rgba(223, 96, 12, 0.6);
+}
+
+.pill-solid:active {
+  transform: scale(0.98);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .content-wrapper {
+    padding-bottom: 70px;
+  }
+
+  .age-card {
+    padding: 32px 24px;
+  }
+
+  .age-title {
+    font-size: 24px;
+  }
+
+  .age-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .age-card {
+    padding: 28px 20px;
+  }
+
+  .age-title {
+    font-size: 22px;
+  }
+}
+
+/* Age Gate */
+.age-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  backdrop-filter: blur(10px);
+}
+
+.age-card {
+  background: linear-gradient(135deg, rgba(30, 30, 40, 0.95), rgba(50, 30, 60, 0.95));
+  border: 1px solid rgba(223, 96, 12, 0.3);
+  border-radius: 24px;
+  padding: 40px 30px;
+  max-width: 340px;
+  width: 90%;
+  text-align: center;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.age-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+  background: linear-gradient(135deg, #df600c, #f45da6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.age-text {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 24px 0;
+  line-height: 1.6;
+}
+
+.age-subtext {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 16px 0 0 0;
+}
+
+.pill-btn {
+  width: 100%;
+  padding: 12px 24px;
+  border-radius: 24px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pill-solid {
+  background: linear-gradient(135deg, #df600c, #f45da6);
+  color: white;
+  box-shadow: 0 8px 24px rgba(223, 96, 12, 0.3);
+}
+
+.pill-solid:hover {
+  box-shadow: 0 12px 32px rgba(223, 96, 12, 0.4);
+}
+
+.pill-solid:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+  .cta-button {
+    padding: 12px 32px;
+    font-size: 16px;
+  }
+
+  .footer {
+    gap: 20px;
+  }
+
+  .footer-link {
+    font-size: 12px;
+  }
+}
+
+.logo {
+  width: 280px;                  /* подбери размер под свой логотип */
+  max-width: 90%;                /* не вылезет за экран на мобильных */
+  height: auto;
+  display: block;
+  margin: 40px auto 20px;        /* отступ сверху и снизу */
+  z-index: 2;                    /* поверх фона */
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 220px;
+    margin: 30px auto 15px;
+  }
+}
+

@@ -1,0 +1,16 @@
+.notifications-skeleton {
+  padding: 16px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+}
+
+.notification-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.notification-settings .settings-toggle {
+  margin-bottom: 0;
+}

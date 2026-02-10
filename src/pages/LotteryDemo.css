@@ -1,0 +1,48 @@
+.lottery-demo-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d1b2e 100%);
+  padding: 40px 20px;
+}
+
+.demo-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.demo-header h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0 0 15px 0;
+  background: linear-gradient(135deg, #df600c 0%, #f45da6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.demo-header p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+.demo-section {
+  margin-bottom: 80px;
+}
+
+@media (max-width: 768px) {
+  .lottery-demo-page {
+    padding: 30px 15px;
+  }
+
+  .demo-header h1 {
+    font-size: 36px;
+  }
+
+  .demo-header p {
+    font-size: 16px;
+  }
+
+  .demo-section {
+    margin-bottom: 60px;
+  }
+}

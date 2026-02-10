@@ -1,0 +1,239 @@
+.history-page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.history-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.history-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+  background: linear-gradient(135deg, #df600c, #f45da6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Placeholder */
+.history-placeholder {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 60px 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.placeholder-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(223, 96, 12, 0.2), rgba(244, 93, 166, 0.2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #df600c;
+}
+
+.placeholder-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+}
+
+.placeholder-text {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+  max-width: 400px;
+}
+
+/* Tickets List */
+.tickets-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ticket-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all 0.3s ease;
+}
+
+.ticket-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.ticket-card.won {
+  border-color: rgba(76, 175, 80, 0.3);
+}
+
+.ticket-card.lost {
+  border-color: rgba(244, 67, 54, 0.3);
+}
+
+.ticket-card.pending {
+  border-color: rgba(255, 193, 7, 0.3);
+}
+
+/* Ticket Header */
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ticket-lottery {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.ticket-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ticket-status.won {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+}
+
+.ticket-status.lost {
+  background: rgba(244, 67, 54, 0.2);
+  color: #f44336;
+}
+
+.ticket-status.pending {
+  background: rgba(255, 193, 7, 0.2);
+  color: #ffc107;
+}
+
+.status-icon {
+  flex-shrink: 0;
+}
+
+/* Ticket Numbers */
+.ticket-numbers {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.number-ball {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(223, 96, 12, 0.3), rgba(244, 93, 166, 0.3));
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Ticket Details */
+.ticket-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.ticket-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ticket-detail.prize {
+  grid-column: 1 / -1;
+  padding: 12px;
+  background: rgba(76, 175, 80, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(76, 175, 80, 0.2);
+}
+
+.detail-label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.detail-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.prize-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #4caf50;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .history-page {
+    padding: 16px;
+  }
+
+  .history-title {
+    font-size: 28px;
+  }
+
+  .ticket-card {
+    padding: 16px;
+  }
+
+  .ticket-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .number-ball {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+
+  .ticket-details {
+    grid-template-columns: 1fr;
+  }
+}

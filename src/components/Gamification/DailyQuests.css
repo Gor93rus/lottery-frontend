@@ -1,0 +1,231 @@
+.daily-quests-container {
+  background: rgba(20, 20, 30, 0.95);
+  border-radius: 20px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  margin: 20px 0;
+}
+
+.quests-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+
+.quests-title-section h3 {
+  margin: 0 0 4px 0;
+  font-size: 20px;
+  color: white;
+}
+
+.quests-subtitle {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+}
+
+.reset-timer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(251, 191, 36, 0.1);
+  border: 1px solid rgba(251, 191, 36, 0.2);
+  border-radius: 12px;
+  color: #fbbf24;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.quests-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.quest-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.quest-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.quest-item.completed {
+  background: rgba(34, 197, 94, 0.1);
+  border-color: rgba(34, 197, 94, 0.3);
+}
+
+.quest-icon {
+  flex-shrink: 0;
+}
+
+.completed-icon {
+  color: #4ade80;
+}
+
+.pending-icon {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.quest-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.quest-title {
+  margin: 0 0 4px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+}
+
+.quest-item.completed .quest-title {
+  color: #4ade80;
+}
+
+.quest-description {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.quest-progress-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.progress-bar-container {
+  flex: 1;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #0098ea 0%, #00b4d8 100%);
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.quest-item.completed .progress-bar-fill {
+  background: linear-gradient(90deg, #4ade80 0%, #22c55e 100%);
+}
+
+.progress-text {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  min-width: 50px;
+  text-align: right;
+}
+
+.quest-reward {
+  flex-shrink: 0;
+}
+
+.reward-badge {
+  position: relative;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  border-radius: 12px;
+  font-weight: bold;
+  color: white;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
+}
+
+.quest-item.completed .reward-badge {
+  background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+}
+
+.reward-checkmark {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 24px;
+  height: 24px;
+  background: #22c55e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  border: 2px solid rgba(20, 20, 30, 0.95);
+}
+
+.quest-item.claimable {
+  background: rgba(251, 191, 36, 0.1);
+  border-color: rgba(251, 191, 36, 0.3);
+}
+
+.claim-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #df600c 0%, #f45da6 100%);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(244, 93, 166, 0.3);
+}
+
+.claim-button:hover:not(:disabled) {
+  box-shadow: 0 6px 16px rgba(244, 93, 166, 0.5);
+  transform: translateY(-2px);
+}
+
+.claim-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.no-quests {
+  text-align: center;
+  padding: 40px 20px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 640px) {
+  .quests-header {
+    flex-direction: column;
+  }
+
+  .reset-timer {
+    align-self: flex-start;
+  }
+
+  .quest-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .quest-reward {
+    width: 100%;
+  }
+
+  .reward-badge {
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,73 @@
+.floating-cart {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.floating-cart-btn {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 
+    0 4px 20px rgba(255, 215, 0, 0.4),
+    0 0 40px rgba(255, 215, 0, 0.2);
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.floating-cart-btn:hover {
+  box-shadow: 
+    0 6px 28px rgba(255, 215, 0, 0.5),
+    0 0 50px rgba(255, 215, 0, 0.3);
+}
+
+.cart-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #ef4444;
+  color: white;
+  min-width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  padding: 0 6px;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #1a1a2e;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.4);
+}
+
+.cart-dropdown {
+  position: absolute;
+  right: 0;
+  top: -20px;
+  width: 340px;
+  max-height: 80vh;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  border-radius: 16px;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.6),
+    0 0 60px rgba(255, 215, 0, 0.2);
+  overflow: hidden;
+  transform-origin: right center;
+}
+
+@media (max-width: 768px) {
+  .cart-dropdown {
+    width: 300px;
+    right: -10px;
+  }
+}

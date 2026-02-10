@@ -1,0 +1,162 @@
+.skeleton-container {
+  width: 100%;
+}
+
+.skeleton-wrapper {
+  margin-bottom: 16px;
+}
+
+/* Shimmer animation */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Lottery Card Skeleton */
+.skeleton-lottery-card {
+  background: rgba(20, 20, 30, 0.95);
+  border-radius: 20px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skeleton-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.skeleton-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+}
+
+.skeleton-title {
+  flex: 1;
+  height: 24px;
+  border-radius: 8px;
+}
+
+.skeleton-card-body {
+  margin-bottom: 24px;
+}
+
+.skeleton-prize {
+  height: 40px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.skeleton-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skeleton-detail-item {
+  height: 20px;
+  border-radius: 6px;
+}
+
+.skeleton-button {
+  height: 48px;
+  border-radius: 12px;
+}
+
+/* List Item Skeleton */
+.skeleton-list-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: rgba(20, 20, 30, 0.95);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skeleton-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.skeleton-text-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skeleton-text {
+  height: 16px;
+  border-radius: 4px;
+}
+
+/* Leaderboard Item Skeleton */
+.skeleton-leaderboard-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: rgba(20, 20, 30, 0.95);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skeleton-rank {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.skeleton-score {
+  width: 80px;
+  height: 32px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/* Chart Skeleton */
+.skeleton-chart {
+  background: rgba(20, 20, 30, 0.95);
+  border-radius: 20px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skeleton-chart-header {
+  margin-bottom: 24px;
+}
+
+.skeleton-chart-body {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  gap: 12px;
+  height: 200px;
+}
+
+.skeleton-bar {
+  flex: 1;
+  border-radius: 8px 8px 0 0;
+  min-height: 40px;
+}

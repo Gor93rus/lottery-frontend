@@ -1,0 +1,176 @@
+.streak-counter-container {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.streak-card {
+  background: rgba(20, 20, 30, 0.95);
+  border-radius: 20px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.streak-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.streak-flame {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(251, 191, 36, 0.2);
+  color: rgba(251, 191, 36, 0.5);
+  transition: all 0.3s ease;
+}
+
+.streak-flame.active {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  color: white;
+  box-shadow: 0 4px 20px rgba(251, 191, 36, 0.5);
+}
+
+.streak-info {
+  flex: 1;
+}
+
+.streak-title {
+  margin: 0 0 4px 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.streak-subtitle {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+}
+
+.streak-progress {
+  margin-bottom: 24px;
+}
+
+.days-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.day-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 8px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.day-item.completed {
+  background: rgba(251, 191, 36, 0.2);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.day-item.pending {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.day-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.day-empty {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.day-label {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+
+.streak-rewards {
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.rewards-title {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.rewards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+}
+
+.reward-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.reward-item.unlocked {
+  background: rgba(34, 197, 94, 0.2);
+  border-color: rgba(34, 197, 94, 0.3);
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.2);
+}
+
+.reward-icon {
+  font-size: 24px;
+}
+
+.reward-text {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+
+.reward-item.unlocked .reward-text {
+  color: #4ade80;
+  font-weight: bold;
+}
+
+.streak-warning {
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(251, 191, 36, 0.1);
+  border: 1px solid rgba(251, 191, 36, 0.2);
+  color: #fbbf24;
+  font-size: 14px;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .days-container {
+    gap: 4px;
+  }
+
+  .day-item {
+    padding: 8px 4px;
+  }
+
+  .day-label {
+    font-size: 8px;
+  }
+}

@@ -1,0 +1,185 @@
+.check-in-button-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.check-in-button {
+  width: 100%;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(135deg, #df600c 0%, #f45da6 100%);
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(244, 93, 166, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.check-in-button.active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.check-in-button.disabled {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  cursor: default;
+  box-shadow: none;
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  color: white;
+}
+
+.flame-icon {
+  color: #ff6b35;
+}
+
+.button-text {
+  flex: 1;
+  text-align: left;
+}
+
+.button-title {
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.25rem;
+}
+
+.button-subtitle {
+  display: block;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.sparkle-icon {
+  color: #ffd700;
+  animation: sparkle 1.5s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+}
+
+/* Feedback */
+.check-in-feedback {
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #df600c 0%, #f45da6 100%);
+  padding: 1rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(244, 93, 166, 0.4);
+  z-index: 1000;
+  min-width: 280px;
+}
+
+.feedback-content {
+  text-align: center;
+  color: white;
+}
+
+.feedback-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.feedback-header h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.xp-earned {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffd700;
+  margin: 0.5rem 0;
+}
+
+.streak-info {
+  font-size: 0.875rem;
+  margin: 0.25rem 0;
+}
+
+.milestone-reward {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.milestone-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.25rem 0;
+}
+
+.reward-info {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0.25rem 0;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .check-in-button {
+    padding: 1rem 1.25rem;
+  }
+
+  .button-title {
+    font-size: 1rem;
+  }
+
+  .button-subtitle {
+    font-size: 0.8125rem;
+  }
+
+  .check-in-feedback {
+    min-width: 250px;
+  }
+}

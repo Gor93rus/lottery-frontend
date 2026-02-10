@@ -1,0 +1,86 @@
+.ws-accordion-section {
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.6), rgba(22, 33, 62, 0.6));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  overflow: hidden;
+}
+
+.ws-accordion-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background: rgba(0, 0, 0, 0.2);
+  border: none;
+  color: #FFD700;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.ws-accordion-header:hover {
+  background: rgba(255, 215, 0, 0.1);
+}
+
+.ws-accordion-header.open {
+  background: rgba(255, 215, 0, 0.15);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.ws-accordion-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.ws-accordion-title {
+  flex: 1;
+}
+
+.ws-accordion-arrow {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.ws-accordion-arrow.open {
+  transform: rotate(180deg);
+}
+
+.ws-accordion-content {
+  padding: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 640px) {
+  .ws-accordion-header {
+    padding: 14px 16px;
+    font-size: 15px;
+  }
+  
+  .ws-accordion-icon {
+    font-size: 18px;
+  }
+  
+  .ws-accordion-content {
+    padding: 16px;
+  }
+}

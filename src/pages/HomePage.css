@@ -1,0 +1,194 @@
+.home-page {
+  padding: 2rem 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.main-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2rem;
+}
+
+.checkin-banner-section {
+  max-width: 800px;
+  margin: 2rem auto 1rem;
+  padding: 0 1rem;
+}
+
+.lotteries-section {
+  margin-top: 2rem;
+}
+
+.lotteries-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.lotteries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.no-lotteries {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.2rem;
+}
+
+/* Lottery card highlighting based on selected currency */
+.lottery-card {
+  background: linear-gradient(135deg, #1e1e2e 0%, #2a2a3e 100%);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.lottery-card.highlighted {
+  opacity: 1;
+  transform: scale(1);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.lottery-card.dimmed {
+  opacity: 0.4;
+  transform: scale(0.97);
+  filter: grayscale(30%);
+}
+
+.lottery-card.dimmed:hover {
+  opacity: 0.6;
+  transform: scale(0.98);
+}
+
+.lottery-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.lottery-card.featured {
+  border: 2px solid rgba(255, 107, 53, 0.3);
+  background: linear-gradient(135deg, #2a2a3e 0%, #3a3a4e 100%);
+}
+
+.lottery-card.featured.highlighted {
+  border: 2px solid rgba(255, 107, 53, 0.5);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 0 30px rgba(255, 107, 53, 0.2);
+}
+
+.lottery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.lottery-header h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #ffffff;
+}
+
+.currency-badge {
+  background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.jackpot {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.jackpot .label {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 5px;
+}
+
+.jackpot .amount {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #FFD700;
+  margin-bottom: 5px;
+}
+
+.jackpot .equivalent {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.ticket-price {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.play-btn {
+  display: block;
+  width: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.play-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .lotteries-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

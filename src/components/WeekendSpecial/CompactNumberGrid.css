@@ -1,0 +1,201 @@
+.ws-compact-grid-container {
+  background: rgba(26, 26, 46, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.ws-grid-header {
+  margin-bottom: 12px;
+}
+
+.ws-selected-count {
+  font-size: 16px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #FFD700, #FF6B35);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.ws-grid-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.ws-action-btn {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.ws-quickpick-btn {
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  color: #1a1a2e;
+}
+
+.ws-quickpick-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+}
+
+.ws-add-ticket-btn {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+}
+
+.ws-add-ticket-btn:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
+.ws-add-ticket-btn:disabled {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.3);
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.ws-clear-btn {
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #ef4444;
+}
+
+.ws-clear-btn:hover:not(:disabled) {
+  background: rgba(239, 68, 68, 0.3);
+  border-color: rgba(239, 68, 68, 0.6);
+}
+
+.ws-action-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Compact 6×6 grid - Mobile optimized */
+.ws-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 6px;
+  max-width: 280px;
+  margin: 16px auto;
+}
+
+.ws-number-cell {
+  aspect-ratio: 1;
+  min-height: 35px;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: rgba(22, 33, 62, 0.6);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.ws-number-cell:hover:not(:disabled) {
+  border-color: rgba(255, 215, 0, 0.5);
+  transform: scale(1.05);
+}
+
+.ws-number-cell.selected {
+  background: linear-gradient(135deg, #FFD700, #FF6B35);
+  border-color: #FFD700;
+  color: #1a1a2e;
+  transform: scale(1.1);
+  box-shadow: 0 4px 16px rgba(255, 215, 0, 0.6);
+  animation: pulse-glow 1.5s ease-in-out infinite;
+}
+
+.ws-number-cell.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 4px 16px rgba(255, 215, 0, 0.6);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(255, 215, 0, 0.9);
+  }
+}
+
+.ws-add-to-cart-btn,
+.ws-clear-selection-btn {
+  width: 100%;
+  padding: 14px 20px;
+  margin-top: 12px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.ws-add-to-cart-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.ws-add-to-cart-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(102, 126, 234, 0.6);
+}
+
+.ws-clear-selection-btn {
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.ws-clear-selection-btn:hover:not(:disabled) {
+  background: rgba(255, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Mobile responsive */
+@media (max-width: 640px) {
+  .ws-compact-grid-container {
+    padding: 12px;
+  }
+
+  .ws-grid {
+    gap: 5px;
+    max-width: 260px;
+  }
+
+  .ws-number-cell {
+    min-height: 32px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ws-grid {
+    gap: 4px;
+    max-width: 240px;
+  }
+
+  .ws-number-cell {
+    min-height: 30px;
+    font-size: 12px;
+  }
+}

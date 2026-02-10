@@ -1,0 +1,16 @@
+.ws-tickets-sold {
+  text-align: center;
+  padding: 10px 16px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 12px 0;
+}
+
+.ws-tickets-sold strong {
+  color: #FFD700;
+  font-weight: 700;
+  font-size: 16px;
+}

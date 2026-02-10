@@ -1,0 +1,340 @@
+.swap-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a0f1f 0%, #2a1530 100%);
+}
+
+/* Back button - COMPACT */
+.swap-back-button {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.swap-back-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(-4px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+/* Main swap card - HALF SCREEN */
+.swap-card {
+  max-width: 340px;
+  width: 100%;
+  margin: 2vh auto 0 auto;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+  position: relative;
+}
+
+/* Header - COMPACT */
+.swap-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.swap-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 0.25rem;
+}
+
+.swap-subtitle {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Input sections - WITH STRONG VISIBLE GLOW */
+.swap-input-section {
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  margin-bottom: 0.75rem;
+  transition: all 0.3s ease;
+  
+  /* Normal state - subtle inner glow */
+  box-shadow: 
+    0 0 0 0 rgba(255, 255, 255, 0),
+    inset 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.swap-input-section:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.15);
+  
+  /* STRONG glow on hover - 3x stronger */
+  box-shadow: 
+    0 0 30px 10px rgba(255, 255, 255, 0.15),
+    inset 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+.swap-input-section:focus-within {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.2);
+  
+  /* VERY STRONG glow on focus - 5x stronger */
+  box-shadow: 
+    0 0 40px 15px rgba(255, 255, 255, 0.25),
+    inset 0 0 40px rgba(255, 255, 255, 0.15);
+}
+
+.swap-label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.5rem;
+  display: block;
+  font-weight: 600;
+}
+
+.swap-input-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.swap-input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.swap-input:focus {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.05);
+}
+
+.swap-input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.swap-currency-select {
+  padding: 0.5rem 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  min-width: 100px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.swap-currency-select:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.swap-currency-select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.swap-balance {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 0.25rem;
+}
+
+/* Flip button - COMPACT */
+.swap-flip-button {
+  width: 40px;
+  height: 40px;
+  margin: 0.5rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.swap-flip-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: rotate(180deg);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+.swap-flip-button:active {
+  transform: rotate(180deg) scale(0.95);
+}
+
+/* Info section - COMPACT + GLOW */
+.swap-info {
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin: 0.75rem 0;
+  
+  /* Subtle inner glow */
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.swap-info:hover {
+  box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.08);
+}
+
+.swap-info-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.35rem 0;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.swap-info-item:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Submit button - COMPACT */
+.swap-submit-button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.75rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.1);
+}
+
+.swap-submit-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15);
+}
+
+.swap-submit-button:active {
+  transform: translateY(0);
+}
+
+.swap-submit-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Mobile - ULTRA COMPACT */
+@media (max-width: 768px) {
+  .swap-card {
+    margin-top: 1vh;
+    padding: 0.75rem;
+    max-width: 95%;
+  }
+
+  .swap-title {
+    font-size: 1.2rem;
+  }
+
+  .swap-header {
+    margin-bottom: 0.75rem;
+  }
+
+  .swap-input-section {
+    padding: 0.6rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .swap-info {
+    padding: 0.6rem;
+    margin: 0.6rem 0;
+  }
+
+  .swap-submit-button {
+    padding: 0.6rem;
+  }
+
+  .swap-flip-button {
+    width: 36px;
+    height: 36px;
+    margin: 0.4rem auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .swap-back-button {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .swap-card {
+    padding: 0.6rem;
+  }
+
+  .swap-title {
+    font-size: 1.1rem;
+  }
+
+  .swap-subtitle {
+    font-size: 0.75rem;
+  }
+
+  .swap-input-section {
+    padding: 0.5rem;
+  }
+
+  .swap-input {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .swap-currency-select {
+    font-size: 0.8rem;
+    min-width: 90px;
+  }
+
+  .swap-label {
+    font-size: 0.7rem;
+  }
+
+  .swap-balance {
+    font-size: 0.7rem;
+  }
+
+  .swap-info-item {
+    font-size: 0.75rem;
+    padding: 0.3rem 0;
+  }
+}

@@ -1,0 +1,247 @@
+.smart-recommendations {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.recommendations-header {
+  margin-bottom: 30px;
+}
+
+.recommendations-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  background: linear-gradient(135deg, #df600c 0%, #f45da6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.recommendations-subtitle {
+  margin: 0;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.recommendation-card {
+  position: relative;
+  background: rgba(20, 20, 20, 0.8);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.recommendation-card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.card-content {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-icon {
+  font-size: 56px;
+  margin-bottom: 15px;
+  text-align: center;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+}
+
+.lottery-name {
+  margin: 0 0 15px 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+}
+
+.reason-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 10px 16px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: white;
+  backdrop-filter: blur(10px);
+}
+
+.sparkle {
+  font-size: 16px;
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+    opacity: 0.8;
+  }
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.info-item.prize {
+  background: linear-gradient(135deg, rgba(223, 96, 12, 0.15) 0%, rgba(244, 93, 166, 0.15) 100%);
+  border-color: rgba(244, 93, 166, 0.2);
+}
+
+.info-label {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.info-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+}
+
+.info-item.prize .info-value {
+  background: linear-gradient(135deg, #df600c 0%, #f45da6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 16px;
+}
+
+.quick-buy-btn {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.quick-buy-btn:hover {
+  box-shadow: 0 8px 30px rgba(244, 93, 166, 0.4);
+}
+
+.recommendations-footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(20, 20, 20, 0.6);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.recommendations-footer p {
+  margin: 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+  .smart-recommendations {
+    padding: 15px;
+  }
+
+  .recommendations-header h2 {
+    font-size: 24px;
+  }
+
+  .recommendations-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .card-content {
+    padding: 20px;
+  }
+
+  .card-icon {
+    font-size: 48px;
+  }
+
+  .lottery-name {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-badge {
+    top: 12px;
+    right: 12px;
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+
+  .card-icon {
+    font-size: 44px;
+  }
+
+  .lottery-name {
+    font-size: 18px;
+  }
+
+  .reason-badge {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .info-label,
+  .info-value {
+    font-size: 12px;
+  }
+
+  .quick-buy-btn {
+    padding: 14px;
+    font-size: 15px;
+  }
+}

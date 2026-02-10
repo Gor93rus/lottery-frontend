@@ -1,0 +1,334 @@
+.referral-progress {
+  background: rgba(20, 20, 20, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  margin: 20px 0;
+}
+
+.progress-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.progress-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #df600c, #f45da6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 8px 0;
+}
+
+.progress-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.progress-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.summary-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.summary-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.summary-content {
+  flex: 1;
+}
+
+.summary-label {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+}
+
+.summary-value {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #df600c, #f45da6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.summary-currency {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.milestones-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.milestone {
+  display: flex;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.milestone:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+.milestone.common {
+  border-left: 4px solid #888;
+}
+
+.milestone.rare {
+  border-left: 4px solid #4a9eff;
+}
+
+.milestone.epic {
+  border-left: 4px solid #a335ee;
+}
+
+.milestone.legendary {
+  border-left: 4px solid #ff8000;
+}
+
+.milestone.unlocked {
+  background: rgba(0, 200, 100, 0.1);
+  border-color: rgba(0, 200, 100, 0.3);
+}
+
+.milestone-icon-wrapper {
+  flex-shrink: 0;
+}
+
+.milestone-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+.milestone-icon.pulse {
+  animation: pulse-milestone 2s ease-in-out infinite;
+}
+
+@keyframes pulse-milestone {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(223, 96, 12, 0.7);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px 10px rgba(223, 96, 12, 0);
+  }
+}
+
+.milestone-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.milestone-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.milestone-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+}
+
+.milestone-reward {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #00ff88;
+  white-space: nowrap;
+}
+
+.progress-bar-container {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.progress-bar-bg {
+  height: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #df600c, #f45da6);
+  border-radius: 6px;
+  transition: width 1s ease-out;
+  box-shadow: 0 0 10px rgba(223, 96, 12, 0.5);
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.milestone-remaining {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+}
+
+.milestone-remaining strong {
+  color: #df600c;
+  font-weight: 700;
+}
+
+.overall-progress {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.overall-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.overall-label {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.overall-value {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #df600c, #f45da6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.overall-bar-bg {
+  height: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.overall-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #00c853, #00ff88);
+  border-radius: 8px;
+  transition: width 1s ease-out;
+  box-shadow: 0 0 15px rgba(0, 200, 83, 0.6);
+}
+
+.next-milestone-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, rgba(223, 96, 12, 0.2), rgba(244, 93, 166, 0.2));
+  border: 2px solid rgba(223, 96, 12, 0.4);
+  border-radius: 12px;
+  padding: 16px 20px;
+}
+
+.next-milestone-banner.completed {
+  background: linear-gradient(135deg, rgba(0, 200, 83, 0.2), rgba(0, 255, 136, 0.2));
+  border-color: rgba(0, 200, 83, 0.4);
+}
+
+.banner-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.banner-text {
+  flex: 1;
+  color: white;
+  font-size: 0.95rem;
+}
+
+.banner-text strong {
+  color: #df600c;
+  font-weight: 700;
+}
+
+.next-milestone-banner.completed .banner-text strong {
+  color: #00ff88;
+}
+
+.banner-reward {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #00ff88;
+  white-space: nowrap;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .referral-progress {
+    padding: 16px;
+  }
+
+  .milestone {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .milestone-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .milestone-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .next-milestone-banner {
+    flex-wrap: wrap;
+  }
+}
