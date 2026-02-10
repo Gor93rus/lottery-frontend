@@ -742,3 +742,24 @@
   margin-top: 0.5rem;
 }
 
+/* Daily Quests Loading State */
+.daily-quests-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 32px 24px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  min-height: 120px;
+}
+
+.daily-quests-loading p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+}
+

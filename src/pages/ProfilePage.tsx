@@ -532,11 +532,24 @@ function ProfilePage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
               >
-                <DailyQuests
-                  quests={quests?.dailyQuests ?? []}
-                  onClaim={quests?.claimQuest}
-                  isClaiming={quests?.isClaiming ?? false}
-                />
+                {quests?.isLoading ? (
+                  <div className="daily-quests-loading">
+                    <motion.div
+                      animate={{ rotate: 360 }}
+                      transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+                      style={{ fontSize: '1rem' }}
+                    >
+                      ⟳
+                    </motion.div>
+                    <p>Загрузка заданий...</p>
+                  </div>
+                ) : (
+                  <DailyQuests
+                    quests={quests?.dailyQuests ?? []}
+                    onClaim={quests?.claimQuest}
+                    isClaiming={quests?.isClaiming ?? false}
+                  />
+                )}
               </motion.div>
             )}
 
